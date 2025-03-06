@@ -47,7 +47,7 @@ class PostsAPI:
 
         validate(response_json, schema=post)
 
-    @allure.step('Полное обновление поста {post_id}')
+    @allure.step('Полное обновление поста ID {post_id}')
     def update_post(self, post_id):
         url = f'{request_url}/{post_id}'
         response = requests.put(url, json=new_post)
@@ -63,7 +63,7 @@ class PostsAPI:
 
         validate(response_json, schema=post)
 
-    @allure.step('Частичное обновление поста {post_id}')
+    @allure.step('Частичное обновление поста ID {post_id}')
     def partial_update_post(self, post_id):
         url = f'{request_url}/{post_id}'
         partial_data = {'title': 'partial title'}
@@ -78,7 +78,7 @@ class PostsAPI:
 
         validate(response_json, schema=post)
 
-    @allure.step('Удаление поста {post_id}')
+    @allure.step('Удаление поста ID {post_id}')
     def delete_post(self, post_id):
         url = f'{request_url}/{post_id}'
         response = requests.delete(url)
