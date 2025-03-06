@@ -74,6 +74,7 @@ class PostsAPI:
 
         assert response.status_code == 200
         assert isinstance(response_json, dict)
+        assert response_json['userId'] > 0, f'Данного юзера не существует'
         assert response_json['title'] == partial_data['title']
 
         validate(response_json, schema=post)
