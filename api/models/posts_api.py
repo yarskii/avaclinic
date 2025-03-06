@@ -27,7 +27,7 @@ class PostsAPI:
 
         log_request('GET', url, response, post_id)
 
-        assert response.status_code == 200
+        assert response.status_code == 200, f'Пост ID {post_id} не существует'
 
         validate(response_json, schema=post)
 
