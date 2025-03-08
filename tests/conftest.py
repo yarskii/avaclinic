@@ -7,6 +7,9 @@ from selene import browser
 from selenium import webdriver
 from utils import config_mobile
 from utils.config import base_url
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver import Chrome
 
 
 @pytest.fixture(scope='function')
@@ -19,6 +22,9 @@ def browser_management():
 
     # Раскомментируйте, если требуется запуск в полноэкранном режиме.
     # driver_options.add_argument('--window-size=1920,1024')
+
+    service = Service(ChromeDriverManager().install())
+    browser.config.driver = Chrome(service=service, options=driver_options)
 
     browser.config.driver_options = driver_options
     browser.config.base_url = base_url
