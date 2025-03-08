@@ -67,7 +67,8 @@ def browser_management(request):
         browser.config.driver = driver
 
         driver_options.page_load_strategy = 'eager'
-        driver_options.add_argument('--window-size=1920,1024')
+        browser.config.window_height = 1080
+        browser.config.window_width = 1920
 
     browser.config.driver_options = driver_options
     browser.config.base_url = base_url
