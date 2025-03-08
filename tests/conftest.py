@@ -9,7 +9,7 @@ from utils import config_mobile
 from utils.config import base_url
 
 
-@pytest.fixture(scope='session', autouse=True)
+@pytest.fixture(scope='session')
 def browser_management():
     driver_options = webdriver.ChromeOptions()
 
