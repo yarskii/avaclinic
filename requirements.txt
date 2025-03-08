@@ -7,3 +7,4 @@ python-dotenv
 webdriver_manager
 requests
 jsonschema
+Appium-Python-Client

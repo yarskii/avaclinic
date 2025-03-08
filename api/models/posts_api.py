@@ -3,7 +3,7 @@ import requests
 from jsonschema import validate
 
 from utils.schemas import all_posts, post
-from utils.config_posts_api import request_url, log_request, new_post, logger
+from utils.config import request_url, log_request, new_post, logger
 
 
 class PostsAPI:
