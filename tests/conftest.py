@@ -9,7 +9,7 @@ from utils import config_mobile
 from utils.config import base_url
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def browser_management():
     driver_options = webdriver.ChromeOptions()
 
@@ -23,7 +23,7 @@ def browser_management():
     browser.config.base_url = base_url
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='session')
 def mobile_management():
     with allure.step('Инициализация сессии приложения'):
         browser.config.driver = appium.Remote(
