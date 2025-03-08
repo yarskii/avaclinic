@@ -9,7 +9,9 @@ from utils import config_mobile
 from utils.config import base_url
 from common import attach
 from selenium.webdriver.chrome.options import Options
+from dotenv import load_dotenv
 
+load_dotenv()
 DEFAULT_BROWSER_VERSION = '126.0'
 DEFAULT_WEB_ENVIRONMENT = 'local'
 
