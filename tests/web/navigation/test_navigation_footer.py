@@ -6,7 +6,9 @@ from web.components.verify import Verify
 
 
 @pytest.mark.parametrize(('section', 'title'),
-                         [('О компании', 'О компании'), ('Вакансии', 'Присоединяйтесь к нашей команде'), ('Отзывы клиентов', 'Отзывы')],
+                         [('О компании', 'О компании'),
+                          ('Вакансии', 'Присоединяйтесь к нашей команде'),
+                          ('Отзывы клиентов', 'Отзывы')],
                          ids=['about', 'vacancy', 'reviews'])
 def test_navigation_footer(browser_management, section, title):
     with allure.step('Открываем главную страницу'):
